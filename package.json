@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/levimendyk/node-readme/issues"
   },
-  "homepage": "https://github.com/levimendyk/node-readme#readme"
+  "homepage": "https://github.com/levimendyk/node-readme#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }

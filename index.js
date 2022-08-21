@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generateMarkdown = require("./utils/generatemarkdown.js");
 
 inquirer
   .prompt([
@@ -35,6 +36,11 @@ const questionsTwo = [];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
+
+// --Added this to writeFile (might want to use appendFile) --LEVI
+fs.writeFile("README.md", process.argv[2], (err) =>
+  err ? console.error(err) : console.log("Success!")
+);
 
 // TODO: Create a function to initialize app
 function init() {}
