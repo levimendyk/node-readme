@@ -1,14 +1,48 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateMarkdown = require("./utils/generatemarkdown.js");
+const generateReadMe = require("./utils/generatemarkdown.js");
 
 inquirer
   .prompt([
     /* Pass your questions in here */
+    {
+      type: "input",
+      message: "What is the the project title?",
+      name: "title",
+    },
+    {
+      type: "input",
+      message: "What is the description?",
+      name: "description",
+    },
+    {
+      type: "input",
+      message: "What is the installation instructions?",
+      name: "installation",
+    },
+    {
+      type: "input",
+      message: "What is the usage informations?",
+      name: "usage",
+    },
+    {
+      type: "input",
+      message: "What are the contribution guidelines?",
+      name: "guidelines",
+    },
+    {
+      type: "input",
+      message: "What are the tests?",
+      name: "tests",
+    },
   ])
-  .then((answers) => {
+  .then((response) => {
     // Use user feedback for... whatever!!
+    const readMeContent = generateReadMe.generateMarkdown(response);
+    fs.writeFile("README.md", readMeContent, (err) =>
+      err ? console.error(err) : console.log("Success!")
+    );
   })
   .catch((error) => {
     if (error.isTtyError) {
@@ -38,9 +72,9 @@ const questionsTwo = [];
 function writeToFile(fileName, data) {}
 
 // --Added this to writeFile (might want to use appendFile) --LEVI
-fs.writeFile("README.md", process.argv[2], (err) =>
-  err ? console.error(err) : console.log("Success!")
-);
+// fs.writeFile("README.md", process.argv[2], (err) =>
+//   err ? console.error(err) : console.log("Success!")
+// );
 
 // TODO: Create a function to initialize app
 function init() {}
