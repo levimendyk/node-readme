@@ -37,11 +37,22 @@ inquirer
       name: "tests",
     },
     {
-        type: "list",
-        message: "What is the license you are using?",
-        name: "license",
-        choices: ["Apache", "MIT", "BOOST", "None"]
-      },
+      type: "list",
+      message: "What is the license you are using?",
+      name: "license",
+      choices: ["Apache", "MIT", "BOOST", "None"],
+    },
+    {
+      type: "input",
+      message: "What is the link to the GitHub profile?",
+      name: "link",
+    },
+    {
+      type: "input",
+      message:
+        "What is your email address to contact for additional questions?",
+      name: "email",
+    },
   ])
   .then((response) => {
     // Use user feedback for... whatever!!
@@ -53,30 +64,29 @@ inquirer
   .catch((error) => {
     if (error.isTtyError) {
       // Prompt couldn't be rendered in the current environment
-    } else {
-      // Something else went wrong
+      console.error(error);
     }
   });
 
-// TODO: Create an array of questions for user input
-const questions = [
-  "What is the link to the GitHub profile?",
-  "How to contact for additional questions?",
-];
+// // TODO: Create an array of questions for user input
+// const questions = [
+//   "What is the link to the GitHub profile?",
+//   "How to contact for additional questions?",
+// ];
 
-// --Create an array of license options with corresponding badge?? -LEVI
-const licenses = [];
+// // --Create an array of license options with corresponding badge?? -LEVI
+// const licenses = [];
 
-// --Create an array of Questions (github profile and email address) -LEVI
-const questionsTwo = [];
+// // --Create an array of Questions (github profile and email address) -LEVI
+// const questionsTwo = [];
 
-// TODO: Create a function to write README file
-// Do I need this function anymore??? -LEVI
-function writeToFile(fileName, data) {}
+// // TODO: Create a function to write README file
+// // Do I need this function anymore??? -LEVI
+// function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
-// What is this??? -LEVI
-function init() {}
+// // TODO: Create a function to initialize app
+// // What is this??? -LEVI
+// function init() {}
 
-// Function call to initialize app
-init();
+// // Function call to initialize app
+// init();
