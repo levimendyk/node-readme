@@ -67,26 +67,3 @@ inquirer
       console.error(error);
     }
   });
-
-// // TODO: Create an array of questions for user input
-// const questions = [
-//   "What is the link to the GitHub profile?",
-//   "How to contact for additional questions?",
-// ];
-
-// // --Create an array of license options with corresponding badge?? -LEVI
-// const licenses = [];
-
-// // --Create an array of Questions (github profile and email address) -LEVI
-// const questionsTwo = [];
-
-// // TODO: Create a function to write README file
-// // Do I need this function anymore??? -LEVI
-// function writeToFile(fileName, data) {}
-
-// // TODO: Create a function to initialize app
-// // What is this??? -LEVI
-// function init() {}
-
-// // Function call to initialize app
-// init();
