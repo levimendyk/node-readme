@@ -1,4 +1,4 @@
-# a
+# Project One
 
 ## Table of Contents:
 
@@ -13,33 +13,33 @@
 
 ## Description:  
   
-f
+This is the project description
 
 ## Installation:  
   
-d 
+These are the instructions 
 
 
 ## Usage:  
 
-e
+This is the usage information
 
 
 ## License:
-No License
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 
 ## Contributing:  
 
-s
+These are the guidelines
 
 
 ## Tests:  
 
-a
+These are the tests
 
 
 ## Questions:
 
-- GitHub Profile Link?  s
-- Email Address for Additional Questions?  s
+- GitHub Profile Link?  https://github.com/levimendyk/node-readme
+- Email Address for Additional Questions?  levi3743@gmail.com
