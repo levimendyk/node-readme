@@ -36,6 +36,12 @@ inquirer
       message: "What are the tests?",
       name: "tests",
     },
+    {
+        type: "list",
+        message: "What is the license you are using?",
+        name: "license",
+        choices: ["Apache", "MIT", "BOOST", "None"]
+      },
   ])
   .then((response) => {
     // Use user feedback for... whatever!!
@@ -54,12 +60,8 @@ inquirer
 
 // TODO: Create an array of questions for user input
 const questions = [
-  "What is the project title?",
-  "What is the description?",
-  "What is the installation instructions?",
-  "What is the usage informations?",
-  "What are the contribution guidelines?",
-  "What are the tests?",
+  "What is the link to the GitHub profile?",
+  "How to contact for additional questions?",
 ];
 
 // --Create an array of license options with corresponding badge?? -LEVI
@@ -69,14 +71,11 @@ const licenses = [];
 const questionsTwo = [];
 
 // TODO: Create a function to write README file
+// Do I need this function anymore??? -LEVI
 function writeToFile(fileName, data) {}
 
-// --Added this to writeFile (might want to use appendFile) --LEVI
-// fs.writeFile("README.md", process.argv[2], (err) =>
-//   err ? console.error(err) : console.log("Success!")
-// );
-
 // TODO: Create a function to initialize app
+// What is this??? -LEVI
 function init() {}
 
 // Function call to initialize app
